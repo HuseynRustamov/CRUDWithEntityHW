@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color:white;
+        }
+
+        .leftside {
+            width: 8%;
+            height: 100vh;
+            float: left;
+            border: 0.25px solid gray;
+        }
+
+          
+
+            .leftside > .menubtn {
+                height: 40px;
+                width: 40px;
+                margin-left: 25px;
+                margin-top: 100px;
+                padding: 0;
+                background-color:white;
+                border: 1px solid white;
+            }
+
+                .leftside > .menubtn > .menu {
+                    height: 35px;
+                    width: 35px;
+                }
+
+            .leftside > .otherbtn {
+                height: 40px;
+                width: 40px;
+                margin-left: 25px;
+                margin-top: 40px;
+                padding: 0;
+                background-color: white;
+                border: 1px solid white;
+            }                     
+
+                .leftside > .otherbtn > .other {
+                    height: 35px;
+                    width: 35px;
+                }
+
+            .leftside > .belowbtn {
+                height: 40px;
+                width: 40px;
+                margin-left: 25px;
+                margin-top: 120px;
+                padding: 0;
+                background-color:white;
+                border: 1px solid white;
+            }                    
+
+                .leftside > .belowbtn > .below {
+                    height: 35px;
+                    width: 35px;
+                }
+
+      
+
+        .headside {
+            width: 77%;
+            height: 10vh;
+            float: left;
+            border: 0.25px solid gray;
+        }
+
+        .mainside {
+            width: 77%;
+            height: 90vh;
+            float: left;
+            border: 0.25px solid gray;
+        }
+
+        .changedside {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .view {
+            width: 100%;
+            height: 80vh;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <aside class="leftside">
+       
+
+
+    </aside>
+    <header class="headside">
+        <nav style="background-color:whitesmoke; " class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="nav-link" href="#" style="font-size: 1.3em;">Constructor</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="margin-left: 10px;">
+                            <a class="nav-link " aria-current="page" href="#" style="font-size: 1.3em;">Dashboard</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 10px;">
+                            <a class="nav-link" href="#" style="font-size: 1.3em;">Orders</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 10px;">
+                            <a class="nav-link" href="#" style="font-size: 1.3em;">Sections</a>
+                        </li>
+
+                        <li class="nav-item" style="margin-left: 10px;">
+                            <a class="nav-link " style="font-size: 1.3em;" href="#">Products</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 10px;">
+                            <a class="nav-link " style="font-size: 1.3em;" href="#">Clients</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input style="border-radius:20px;" class="form-control me-2" type="search" placeholder="Search"
+                               aria-label="Search">
+                        <button style="border-radius:20px;" class="btn btn-outline-success"
+                                type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="mainside">
+        <div class="changedside">
+            <div class="btn-group">
+                <button  onclick="location.href='@Url.Action("Index", "Admin")'" type="button" class="btn btn-primary" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;width: 100px;">Info</button>
+                <button  onclick="location.href='@Url.Action("Create", "Admin")'" type="button" class="btn btn-primary" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width:100px;">Register</button>
+            </div>
+        </div>
+
+        <div class="view">
+            @RenderBody()
+        </div>
+
+    </section>
+
+    <aside class="rightside">
+
+        <div class="info">
+          
+
+        </div>
+
+        <div class="info">
+          
+        </div>
+
+        <div class="info">
+            
+        </div>
+
+
+
+    </aside>
+
+</body>
+</html>
